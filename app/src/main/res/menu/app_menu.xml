@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/undo"
+        android:icon="@drawable/ic_baseline_undo_24"
+        android:iconTint="@color/white"
+        app:showAsAction="always"
+        android:title="@string/appMenu_undo_str" />
+
+    <item android:id="@+id/redo"
+        android:icon="@drawable/ic_baseline_redo_24"
+        android:iconTint="@color/white"
+        app:showAsAction="always"
+        android:title="@string/appMenu_redo_str" />
+
+    <item android:id="@+id/zoom_in"
+        android:icon="@drawable/ic_baseline_zoom_in_24"
+        android:iconTint="@color/white"
+        app:showAsAction="always"
+        android:title="@string/appMenu_zoom_in_str" />
+
+    <item android:id="@+id/zoom_out"
+        android:icon="@drawable/ic_baseline_zoom_out_24"
+        android:iconTint="@color/white"
+        app:showAsAction="always"
+        android:title="@string/appMenu_zoom_out_str" />
+
+    <item android:id="@+id/save_project"
+        android:icon="@drawable/ic_baseline_check_24"
+        app:showAsAction="always"
+        android:iconTint="@color/white"
+        android:title="@string/appMenu_save_text_str" />
+
+    <!--<item android:id="@+id/grid_on_off"
+        android:icon="@drawable/ic_baseline_color_lens_24"
+        app:showAsAction="ifRoom"
+        android:iconTint="@color/white"
+        android:title="@string/appMenu_grid_on_off" />-->
+    <item android:id="@+id/transparent_on_off"
+        android:icon="@drawable/ic_baseline_color_lens_24"
+        app:showAsAction="ifRoom"
+        android:iconTint="@color/white"
+        android:title="@string/appMenu_transparent_on_off" />
+    <item android:id="@+id/rotate"
+        android:icon="@drawable/ic_baseline_color_lens_24"
+        app:showAsAction="ifRoom"
+        android:iconTint="@color/white"
+        android:title="@string/appMenu_rotate" />
+    <item android:id="@+id/flip"
+        android:icon="@drawable/ic_baseline_color_lens_24"
+        app:showAsAction="ifRoom"
+        android:iconTint="@color/white"
+        android:title="@string/appMenu_flip" />
+
+    <item android:id="@+id/reset_zoom"
+        android:icon="@drawable/ic_baseline_color_lens_24"
+        app:showAsAction="ifRoom"
+        android:iconTint="@color/white"
+        android:title="@string/appMenu_reset_zoom_str" />
+    <item android:id="@+id/import_image"
+        android:icon="@drawable/ic_baseline_color_lens_24"
+        app:showAsAction="ifRoom"
+        android:iconTint="@color/white"
+        android:title="@string/appMenu_import_iamge_str" />
+
+    <item android:id="@+id/export_to_png"
+        android:icon="@drawable/ic_baseline_color_lens_24"
+        app:showAsAction="ifRoom"
+        android:iconTint="@color/white"
+        android:title="@string/appMenu_save_as_png_str" />
+
+    <item android:id="@+id/export_to_jpg"
+        android:icon="@drawable/ic_baseline_color_lens_24"
+        app:showAsAction="ifRoom"
+        android:iconTint="@color/white"
+        android:title="@string/appMenu_save_as_jpg_str" />
+
+<!--    <item android:id="@+id/change_project_name"
+        android:icon="@drawable/ic_baseline_color_lens_24"
+        app:showAsAction="ifRoom"
+        android:iconTint="@color/white"
+        android:title="@string/appMenu_change_project_name_str" />-->
+
+</menu>

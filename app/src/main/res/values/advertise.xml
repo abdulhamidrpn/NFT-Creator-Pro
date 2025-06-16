@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+
+    <!--ADMOB property -->
+    <string name="admob_app_id">ca-app-pub-6797594674942943~5725286899</string>
+    <string name="interstitial_app_id">ca-app-pub-6797594674942943/3110731845</string>
+    <string name="banner_app_id">ca-app-pub-6797594674942943/8683209450</string>
+    <string name="app_open_ad_unit_id">ca-app-pub-6797594674942943/9034943762</string>
+    <!--Test ADMOB property -->
+
+    <!--<string name="admob_app_id">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="interstitial_app_id">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="banner_app_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="app_open_ad_unit_id">ca-app-pub-3940256099942544/3419835294</string>-->
+
+
+    <string name="facebook_app_id">3283607081868375</string>
+    <string name="facebook_banner_unit_id">3283607081868375_3283620471867036</string>
+    <string name="facebook_interstitial_unit_id">3283607081868375_3283621455200271</string>
+
+    <!--
+        <string name="facebook_banner_unit_id">IMG_16_9_APP_INSTALL#3283607081868375_3283620471867036</string>
+        <string name="facebook_interstitial_unit_id">IMG_16_9_APP_INSTALL#3283607081868375_3283621455200271</string>
+    -->
+</resources>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#FFCC80</color>         <!-- Lighter orange -->
+    <color name="primary_light">#FAC736</color>
+    <color name="primary_dark">#D19C03</color>
+    <color name="primary_variant">#FF9800</color> <!-- Darker orange for status bar -->
+    <color name="secondary">#80CBC4</color>       <!-- Lighter teal -->
+    <color name="secondary_light">#f05545</color>
+    <color name="secondary_dark">#7f0000</color>
+    <color name="background">#121212</color>      <!-- Near black -->
+    <color name="surface">#1E1E1E</color>         <!-- Dark gray for cards -->
+    <color name="error">#EF9A9A</color>          <!-- Light red for errors -->
+    <color name="on_primary">#000000</color>      <!-- Black on primary -->
+    <color name="on_secondary">#000000</color>    <!-- Black on secondary -->
+    <color name="on_background">#FFFFFF</color>   <!-- White on background -->
+    <color name="on_surface">#FFFFFF</color>      <!-- White on surface -->
+    <color name="on_error">#000000</color>        <!-- Black on error -->
+    <color name="text_primary">#E0E0E0</color>    <!-- Light gray for primary text -->
+    <color name="text_secondary">#BDBDBD</color>  <!-- Medium light gray for secondary text -->
+
+
+    <color name="bg_soft_transparent">#415E5E5E</color>
+
+    <color name="bg_soft">#585858</color>
+    <color name="bg_hard">#000000</color>
+    <color name="bg_opposite">#FFFFFF</color>
+
+    <color name="bg_white">#FFFFFF</color>
+    <color name="bg_dark">#2A2C30</color>
+    <color name="bg_field">#0A000000</color>
+    <color name="bg_field_dark">#0F000000</color>
+    <color name="ic_dark">#2C3240</color>
+    <color name="ic_soft">#BABABB</color>
+    <color name="tx_dark">#FFFFFF</color>
+    <color name="tx_opposite">#000000</color>
+    <color name="tx_soft">#BABABB</color>
+    <color name="success">#51B55F</color>
+    <color name="bt_secondary">#F5F5F5</color>
+    <color name="light_overlay">#E6FFFFFF</color>
+    <color name="dark_overlay">#14000000</color>
+
+
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="activityMainFAB_backgroundColor">#eaddff</color>
+</resources>

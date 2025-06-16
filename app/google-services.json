@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "599234921241",
+    "project_id": "nft-creator-pro---pixel-art",
+    "storage_bucket": "nft-creator-pro---pixel-art.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:599234921241:android:0599392fc7cfd9d760bb88",
+        "android_client_info": {
+          "package_name": "nft.nftcreator.pixel.pixelart"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCW2j9D9yv3CqANB8Rg7HrzPLbELS9vM2E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      },
+      "admob_app_id": "ca-app-pub-6797594674942943~5725286899"
+    }
+  ],
+  "configuration_version": "1"
+}

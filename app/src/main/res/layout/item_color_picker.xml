@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<View xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:backgroundTint="@android:color/holo_orange_dark"
+    android:background="@drawable/circular_view"
+    android:layout_marginHorizontal="@dimen/spacing_4"/>

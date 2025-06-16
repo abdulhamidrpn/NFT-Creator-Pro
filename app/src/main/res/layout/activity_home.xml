@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_soft"
+    android:orientation="vertical">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:openDrawer="end">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="false">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"
+                app:elevation="6dp">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+                    app:contentInsetStartWithNavigation="0dp"
+                    app:layout_scrollFlags="scroll|enterAlways"
+                    app:navigationIcon="@drawable/ic_menu"
+                    app:title="@string/app_name"
+                    app:titleTextColor="@color/white" />
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <FrameLayout
+                android:id="@+id/frame_container_home"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+            <FrameLayout
+                android:id="@+id/frame_container_exported"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+            <FrameLayout
+                android:id="@+id/frame_container_saved"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+            <FrameLayout
+                android:id="@+id/frame_container_setting"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+            <RelativeLayout
+                android:id="@+id/lyt_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom">
+
+                <LinearLayout
+                    android:id="@+id/lyt_bar_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/bg_hard"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/spacing_24">
+
+                    <RelativeLayout
+                        android:id="@+id/menu_project"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="onNavigationMenuClick"
+                        android:paddingVertical="@dimen/spacing_4">
+
+                        <ImageView
+                            android:id="@+id/menu_project_img"
+                            android:layout_width="@dimen/spacing_20"
+                            android:layout_height="@dimen/spacing_20"
+                            android:layout_centerInParent="true"
+                            app:srcCompat="@drawable/ic_list"
+                            app:tint="@color/ic_soft" />
+
+                    </RelativeLayout>
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <RelativeLayout
+                        android:id="@+id/menu_exported"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="onNavigationMenuClick"
+                        android:paddingVertical="@dimen/spacing_4">
+
+                        <ImageView
+                            android:id="@+id/menu_exported_img"
+                            android:layout_width="@dimen/spacing_20"
+                            android:layout_height="@dimen/spacing_20"
+                            android:layout_centerInParent="true"
+                            app:srcCompat="@drawable/ic_image"
+                            app:tint="@color/ic_soft" />
+
+                    </RelativeLayout>
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <RelativeLayout
+                        android:id="@+id/menu_add"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="onNavigationMenuClick">
+
+                        <View
+                            android:id="@+id/menu_add_strip"
+                            android:layout_width="@dimen/spacing_48"
+                            android:layout_height="@dimen/spacing_36"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/indicator_menu"
+                            android:visibility="invisible" />
+
+                        <ImageView
+                            android:id="@+id/menu_add_img"
+                            android:layout_width="@dimen/spacing_26"
+                            android:layout_height="@dimen/spacing_26"
+                            android:layout_centerInParent="true"
+                            app:srcCompat="@drawable/ic_add"
+                            app:tint="@color/primary" />
+
+                    </RelativeLayout>
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <RelativeLayout
+                        android:id="@+id/menu_saved"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="onNavigationMenuClick"
+                        android:paddingVertical="@dimen/spacing_4">
+
+                        <ImageView
+                            android:id="@+id/menu_saved_img"
+                            android:layout_width="@dimen/spacing_20"
+                            android:layout_height="@dimen/spacing_20"
+                            android:layout_centerInParent="true"
+                            app:srcCompat="@drawable/ic_saved"
+                            app:tint="@color/ic_soft" />
+
+                    </RelativeLayout>
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <RelativeLayout
+                        android:id="@+id/menu_setting"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="onNavigationMenuClick"
+                        android:paddingVertical="@dimen/spacing_4">
+
+                        <ImageView
+                            android:id="@+id/menu_setting_img"
+                            android:layout_width="@dimen/spacing_22"
+                            android:layout_height="@dimen/spacing_22"
+                            android:layout_centerInParent="true"
+                            app:srcCompat="@drawable/ic_setting"
+                            app:tint="@color/ic_soft" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <include
+                    layout="@layout/include_banner_ad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/lyt_bar_content" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_6"
+                    android:layout_above="@id/lyt_bar_content"
+                    android:background="@drawable/shape_gradient_soft" />
+
+            </RelativeLayout>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/bg_soft"
+            android:fitsSystemWindows="false"
+            android:scrollbars="none">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/spacing_18"
+                    android:paddingVertical="@dimen/spacing_16">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="@dimen/spacing_2"
+                        android:layout_marginVertical="@dimen/spacing_10"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/spacing_34"
+                            android:layout_height="@dimen/spacing_34"
+                            android:src="@drawable/logo" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_10"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="@string/app_name"
+                            android:textColor="@color/tx_dark"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="@dimen/spacing_4"
+                        android:background="@color/bg_field" />
+
+                    <include
+                        android:id="@+id/include"
+                        layout="@layout/include_setting_drawer" />
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </com.google.android.material.navigation.NavigationView>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</LinearLayout>

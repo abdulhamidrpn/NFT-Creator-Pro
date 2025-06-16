@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_soft"
+    android:fillViewport="true"
+    tools:context=".fragments.colorpicker.rgb.RGBColorPickerFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fragmentRGBColorPicker_rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_soft"
+        android:paddingBottom="@dimen/spacing_50"
+        tools:context=".fragments.colorpicker.rgb.RGBColorPickerFragment">
+
+
+        <Button
+            android:id="@+id/fragmentRGBColorPicker_button_picker"
+            style="?attr/materialAlertDialogBodyTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_50"
+            android:layout_marginTop="@dimen/spacing_50"
+            android:layout_marginRight="@dimen/spacing_6"
+            android:layout_marginBottom="@dimen/spacing_10"
+            android:backgroundTint="@color/bg_opposite"
+            android:text="@string/fragmentNewColorPalette_picker_str"
+            android:textColor="@color/tx_opposite"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/fragmentRGBColorPicker_button_presets"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <Button
+            android:id="@+id/fragmentRGBColorPicker_button_presets"
+            style="?attr/materialAlertDialogBodyTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_6"
+            android:layout_marginTop="@dimen/spacing_50"
+            android:layout_marginRight="@dimen/spacing_50"
+            android:backgroundTint="@color/bg_hard"
+            android:elevation="@dimen/spacing_20"
+            android:text="@string/fragmentNewColorPalette_presets_str"
+            android:textColor="@color/tx_dark"
+            app:layout_constraintLeft_toRightOf="@id/fragmentRGBColorPicker_button_picker"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_picker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_50"
+            android:layout_marginTop="@dimen/spacing_20"
+            android:layout_marginRight="@dimen/spacing_50"
+            android:layout_marginBottom="@dimen/spacing_50"
+            android:visibility="visible"
+
+            app:cardBackgroundColor="@color/cardview_dark_background"
+            app:cardCornerRadius="@dimen/spacing_12"
+            app:cardElevation="@dimen/spacing_20"
+            app:contentPadding="@dimen/spacing_20"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragmentRGBColorPicker_button_picker">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.larswerkman.holocolorpicker.ColorPicker
+                    android:id="@+id/picker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btn_color_reset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:clickable="true"
+                    android:contentDescription="Color Reset"
+                    android:focusable="true"
+                    android:tint="@color/black"
+                    app:backgroundTint="@color/white"
+                    app:fabSize="mini"
+                    app:layout_constraintStart_toStartOf="@+id/picker"
+                    app:layout_constraintTop_toBottomOf="@+id/picker"
+                    app:rippleColor="@color/primary_light"
+                    app:srcCompat="@drawable/ic_round_restore" />
+
+
+                <com.larswerkman.holocolorpicker.OpacityBar
+                    android:id="@+id/opacitybar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_10"
+                    app:layout_constraintEnd_toEndOf="@+id/picker"
+                    app:layout_constraintStart_toStartOf="@+id/picker"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_color_reset" />
+
+                <com.larswerkman.holocolorpicker.ValueBar
+                    android:id="@+id/valuebar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_20"
+                    app:layout_constraintEnd_toEndOf="@+id/opacitybar"
+                    app:layout_constraintStart_toStartOf="@+id/opacitybar"
+                    app:layout_constraintTop_toBottomOf="@+id/opacitybar" />
+
+
+                <Button
+                    android:id="@+id/fragmentRGBColorPicker_doneButton"
+                    style="?attr/materialAlertDialogBodyTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/fragmentNewColorPalette_done_str"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/valuebar" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_presets"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/spacing_50"
+            android:layout_marginTop="@dimen/spacing_20"
+            android:layout_marginRight="@dimen/spacing_50"
+            android:layout_marginBottom="@dimen/spacing_50"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/cardview_dark_background"
+            app:cardCornerRadius="@dimen/spacing_12"
+            app:cardElevation="@dimen/spacing_20"
+            app:contentPadding="@dimen/spacing_20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragmentRGBColorPicker_button_presets">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_color_presets"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:layout_constraintBottom_toTopOf="@+id/fragmentRGBColorPicker_doneButton_presets"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/fragmentRGBColorPicker_doneButton_presets"
+                    style="?attr/materialAlertDialogBodyTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/fragmentNewColorPalette_done_str"
+                    android:textColor="@color/tx_dark"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
+
+    <!--
+
+    <View
+            android:id="@+id/fragmentRGBColorPicker_colorPreview"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/fragmentRGBColorPicker_redProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:valueFrom="0"
+            android:valueTo="255"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragmentRGBColorPicker_colorPreview"
+            app:thumbColor="#ff0000"
+            app:trackColor="#ff0000" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/fragmentRGBColorPicker_greenProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:valueFrom="0"
+            android:valueTo="255"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/fragmentRGBColorPicker_redProgressBar"
+            app:layout_constraintTop_toBottomOf="@+id/fragmentRGBColorPicker_redProgressBar"
+            app:thumbColor="#00ff00"
+            app:trackColor="#00ff00" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/fragmentRGBColorPicker_blueProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:valueFrom="0"
+            android:valueTo="255"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/fragmentRGBColorPicker_greenProgressBar"
+            app:layout_constraintTop_toBottomOf="@+id/fragmentRGBColorPicker_greenProgressBar"
+            app:thumbColor="#0000ff"
+            app:trackColor="#0000ff" />
+
+        <Button
+            android:id="@+id/fragmentRGBColorPicker_doneButton"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/fragmentNewColorPalette_done_str"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/fragmentRGBColorPicker_valueB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/fragmentRGBColorPicker_valueB_str"
+            app:layout_constraintBottom_toBottomOf="@+id/fragmentRGBColorPicker_blueProgressBar"
+            app:layout_constraintEnd_toStartOf="@+id/fragmentRGBColorPicker_blueProgressBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/fragmentRGBColorPicker_blueProgressBar" />
+
+        <TextView
+            android:id="@+id/fragmentRGBColorPicker_valueG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/fragmentRGBColorPicker_valueG_str"
+            app:layout_constraintBottom_toBottomOf="@+id/fragmentRGBColorPicker_greenProgressBar"
+            app:layout_constraintEnd_toStartOf="@+id/fragmentRGBColorPicker_greenProgressBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/fragmentRGBColorPicker_greenProgressBar" />
+
+        <TextView
+            android:id="@+id/fragmentRGBColorPicker_valueR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fragmentRGBColorPicker_valueR_str"
+            app:layout_constraintBottom_toBottomOf="@+id/fragmentRGBColorPicker_redProgressBar"
+            app:layout_constraintEnd_toEndOf="@+id/fragmentRGBColorPicker_valueG"
+            app:layout_constraintStart_toStartOf="@+id/fragmentRGBColorPicker_valueG"
+            app:layout_constraintTop_toTopOf="@+id/fragmentRGBColorPicker_redProgressBar" />
+
+    -->

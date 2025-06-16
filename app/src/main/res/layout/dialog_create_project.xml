@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/spacing_20"
+    android:background="@drawable/card_light"
+    android:orientation="vertical"
+    android:padding="@dimen/spacing_20">
+
+    <View
+        android:layout_width="300dp"
+        android:layout_height="0dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_20"
+        android:fontFamily="sans-serif-medium"
+        android:text="New Project"
+        android:textColor="@color/tx_dark"
+        android:textSize="@dimen/txt_mlarge" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spacing_44"
+        android:layout_marginBottom="@dimen/spacing_12"
+        android:background="@drawable/edit_text"
+        android:hint="Project name"
+        android:inputType="text"
+        android:maxLength="50"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/tx_dark"
+        android:textColorHint="@color/tx_soft" />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/flex_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_12"
+        app:flexWrap="wrap"
+        app:showDividerHorizontal="end">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/radio12x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_14"
+            android:paddingStart="0dp"
+            android:paddingEnd="@dimen/spacing_12"
+            android:tag="12"
+            android:text="12x12"
+            android:textColor="@color/tx_dark" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/radio16x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_14"
+            android:paddingStart="0dp"
+            android:paddingEnd="@dimen/spacing_12"
+            android:tag="16"
+            android:text="16x16"
+            android:textColor="@color/tx_dark" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/radio24x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_14"
+            android:paddingStart="0dp"
+            android:paddingEnd="@dimen/spacing_12"
+            android:tag="24"
+            android:text="24x24"
+            android:textColor="@color/tx_dark" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/radio32x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_14"
+            android:paddingStart="0dp"
+            android:paddingEnd="@dimen/spacing_12"
+            android:tag="32"
+            android:text="32x32"
+            android:textColor="@color/tx_dark" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/radio48x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_14"
+            android:paddingStart="0dp"
+            android:paddingEnd="@dimen/spacing_12"
+            android:tag="48"
+            android:text="48x48"
+            android:textColor="@color/tx_dark" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/radio64x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_14"
+            android:paddingStart="0dp"
+            android:paddingEnd="@dimen/spacing_12"
+            android:tag="64"
+            android:text="64x64"
+            android:textColor="@color/tx_dark" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/radioCustom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_14"
+            android:paddingStart="0dp"
+            android:paddingEnd="@dimen/spacing_12"
+            android:tag="12"
+            android:text="Custom"
+            android:textColor="@color/tx_dark" />
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <EditText
+        android:id="@+id/dimen"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spacing_44"
+        android:layout_marginBottom="@dimen/spacing_20"
+        android:background="@drawable/edit_text"
+        android:hint="Canvas Size"
+        android:inputType="number"
+        android:maxLength="50"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/tx_dark"
+        android:textColorHint="@color/tx_soft" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_create"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spacing_40"
+            android:background="@drawable/button_primary"
+            android:text="START"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</LinearLayout>
